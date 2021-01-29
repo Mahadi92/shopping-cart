@@ -25,11 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="decrease-quantity" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="current-quantity" type="text" class="form-control text-center" value="1">
-                           <button id="increase-quantity" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="handleProductChanges('phone', false);" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="phone-current-quantity" type="text" class="form-control text-center" value="1">
+                           <button onclick=" handleProductChanges('phone', true);" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$<span id="price">1220</span> </h5>
+                        <h5>$<span id="phone-price">1220</span> </h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -43,12 +43,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="handleProductChanges('case', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="case-current-quantity" type="text" class="form-control text-center" value="1">
+                           <button onclick="handleProductChanges('case', true);"  class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$ <span id="case-price">59</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
