@@ -60,9 +60,32 @@ function handleProductChanges(product, isIncrease) {
     }
 
     document.getElementById(product + '-price').innerText = priceTotal;
+
+    calculateTotal();
 }
 
+function calculateTotal() {
 
+    const phoneCount = getInputValue('phone');
+    const caseCount = getInputValue('case');
+
+    const totalPrice = phoneCount * 1220 + caseCount * 59;
+    document.getElementById('total-price').innerText = totalPrice;
+
+    const tex = Math.round(totalPrice * 0.1);
+    document.getElementById('texAmout').innerText = tex;
+
+    const grandTotal = totalPrice + tex;
+    document.getElementById('grand-total').innerText = grandTotal;
+
+}
+
+function getInputValue(product) {
+    const productInput = document.getElementById(product + '-current-quantity');
+    const productCount = parseInt(productInput.value);
+    return productCount;
+
+}
 // function handleProductChanges(isIncrease) {
 //     const quantityInput = document.getElementById('phone-current-quantity');
 //     const quantityCount = parseInt(quantityInput.value);
